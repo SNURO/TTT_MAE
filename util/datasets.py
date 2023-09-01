@@ -19,7 +19,7 @@ from timm.data.constants import IMAGENET_DEFAULT_MEAN, IMAGENET_DEFAULT_STD
 
 def build_dataset(is_train, args):
     transform = build_transform(is_train, args)
-    if args.dataset_name == 'imagenet_c':
+    if args.dataset_name == 'imagenetC':
         root = args.data_path
     else:
         root = os.path.join(args.data_path, 'train') if is_train else os.path.join(args.data_path, 'val')
